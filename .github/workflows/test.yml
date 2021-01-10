@@ -25,8 +25,3 @@ jobs:
         extended: true
     - name: Test
       run: hugo -v --gc
-    - name: Check HTML
-      uses: chabad360/htmlproofer@master
-      with:
-        directory: "./public"
-        arguments: "--check-html --allow-hash-href --empty-alt-ignore --disable-external --root-dir template-hugo-codeit"
