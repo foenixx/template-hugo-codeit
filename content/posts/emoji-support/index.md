@@ -12,7 +12,7 @@ resources:
     src: "featured-image.jpg"
 
 tags: ["emoji"]
-categories: ["Markdown"]
+categories: ["Hugo"]
 
 lightgallery: true
 ---

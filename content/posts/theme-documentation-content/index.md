@@ -1,6 +1,6 @@
 ---
-weight: 2
-title: "Theme Documentation - Content"
+weight: 1
+title: "Page Content"
 date: 2020-03-05T15:58:26+08:00
 lastmod: 2020-03-05T15:58:26+08:00
 draft: false
@@ -12,7 +12,7 @@ resources:
     src: "featured-image.jpg"
 
 tags: ["content", "Markdown"]
-categories: ["documentation"]
+categories: ["Hugo"]
 
 lightgallery: true
 
@@ -245,7 +245,7 @@ This part is shown in the [emoji support page](../emoji-support/).
 
 **CodeIT** theme supports mathematical formulas based on [$ \KaTeX $](https://katex.org/).
 
-Set the property `enable = true` under `[params.math]` in your [site configuration](../theme-documentation-basics#site-configuration)
+Set the property `enable = true` under `[params.math]` in your `config.toml`.
 and the property `math: true` of the article front matter to enable the automatic rendering of mathematical formulas.
 
 {{< admonition tip >}}
@@ -281,7 +281,7 @@ The rendered output looks like this:
 $ c = \pm\sqrt{a^2 + b^2} $ and \\( f(x)=\int\_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\)
 
 {{< admonition tip >}}
-You can add more block and inline delimiters in your [site configuration](../theme-documentation-basics#site-configuration).
+You can add more block and inline delimiters in your `config.toml`.
 {{< /admonition >}}
 
 #### Copy-tex
@@ -290,7 +290,7 @@ You can add more block and inline delimiters in your [site configuration](../the
 
 By the extension, when selecting and copying $ \KaTeX $ rendered elements, copies their $ \LaTeX $ source to the clipboard.
 
-Set the property `copyTex = true` under `[params.math]` in your [site configuration](../theme-documentation-basics#site-configuration) to enable Copy-tex.
+Set the property `copyTex = true` under `[params.math]` in your `config.toml` to enable Copy-tex.
 
 Select and copy the formula rendered in the previous section, and you can find that the copied content is the LaTeX source code.
 
@@ -300,7 +300,7 @@ Select and copy the formula rendered in the previous section, and you can find t
 
 By the extension, you can write beautiful chemical equations easily in the article.
 
-Set the property `mhchem = true` under `[params.math]` in your [site configuration](../theme-documentation-basics#site-configuration) to enable mhchem.
+Set the property `mhchem = true` under `[params.math]` in your `config.toml` to enable mhchem.
 
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
