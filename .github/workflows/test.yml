@@ -1,6 +1,10 @@
 name: test
 
 on:
+  push:
+    branches-ignore:
+      - gh-pages
+      - main
   pull_request:
     branches-ignore:
       - gh-pages
@@ -20,4 +24,9 @@ jobs:
         hugo-version: 'latest'
         extended: true
     - name: Test
-      run: hugo
+      run: hugo -v --gc
+    - name: Check HTML
+      uses: chabad360/htmlproofer@master
+      with:
+        directory: "./public"
+        arguments: --check-html --allow-hash-href --empty-alt-ignore --disable-external
