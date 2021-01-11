@@ -599,7 +599,7 @@ ignoreErrors = ["error-remote-getjson"]
 # Options to make hugo output files
 [outputs]
   home = ["HTML", "JSON", "RSS"]
-  page = ["HTML"]
+  page = ["HTML", "MarkDown"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   taxonomyTerm = ["HTML"]
