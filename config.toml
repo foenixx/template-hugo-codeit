@@ -382,9 +382,9 @@ ignoreErrors = ["error-remote-getjson"]
       enable = true
       # Disqus comment config (https://disqus.com/)
       [params.page.comment.disqus]
-        enable = true
+        enable = false
         # Disqus shortname to use Disqus in posts
-        shortname = "sosiristseng"
+        shortname = ""
       # Gitalk comment config (https://github.com/gitalk/gitalk)
       [params.page.comment.gitalk]
         enable = false
