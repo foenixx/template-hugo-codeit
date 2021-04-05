@@ -1,9 +1,6 @@
 name: github pages
 
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   build:
@@ -20,10 +17,12 @@ jobs:
         hugo-version: 'latest'
         extended: true
     - name: Build
-      run: hugo --gc --minify
+      run: hugo --minify
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.8.0
+      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
         full_commit_message: ${{ github.event.head_commit.message }}
+        force_orphan: true
